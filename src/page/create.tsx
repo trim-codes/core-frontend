@@ -1,4 +1,4 @@
-import ExchangeRateForm from "../component/ExchangeRateForm";
+import ExchangeRateForm from "../components/ExchangeRateForm";
 import { ExchangeRate, SCREEN } from "../utility/types";
 
 interface CreateProps {

@@ -1,13 +1,30 @@
-import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomeScreen from "./page/home";
+import SignInScreen from "./page/sign-in";
+import SignUpScreen from "./page/sign-up";
+import DashboardScreen from "./page/dashboard";
+// import { Navbar } from "./components/navbar";
+// import { Footer } from "./components/footer";
+
+import { SheetProvider } from "./providers/sheet-provider";
+
+// Import the SheetProvider
+
 
 const App = () => {
   return (
-    <div className="text-center my-40">
-      <h1>Start vite + typescript</h1>
-      <p>
-        Edit <code>App.tsx</code> and save to test HMR updates.
-      </p>
-    </div>
+    <Router>
+      <SheetProvider>
+        {/* <Navbar /> */}
+        <Routes>
+          <Route path="/" element={<HomeScreen />} />
+          <Route path="/sign-in" element={<SignInScreen />} />
+          <Route path="/sign-up" element={<SignUpScreen />} />
+          <Route path="/dashboard" element={<DashboardScreen />} />
+        </Routes>
+        {/* <Footer /> */}
+      </SheetProvider>
+    </Router>
   );
 }
 
