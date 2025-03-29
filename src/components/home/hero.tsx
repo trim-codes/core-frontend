@@ -30,18 +30,18 @@ export const Hero = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="flex-1 max-w-3xl relative">
+                    <div className="flex-1 max-w-3xl relative flex flex-col">
                         <Input
                             placeholder="Type or paste a link (URL)"
                             className="mx-auto p-6"
                             style={{ padding: '1.5rem' }}
                         />
-                        <div className="absolute right-2 top-3">
+                        <div className="absolute md:right-2 md:top-3 top-[110%] w-full md:w-auto">
                             <Button
-                                className="bg-gray-200 hover:bg-gray-100"
+                                className="bg-gray-200 hover:bg-gray-100 w-full md:w-auto"
                                 size="lg"
                             >
-                                <p className="text-lg text-black">Shorten For Free</p>
+                                <p className="text-lg text-black">Shorten Link</p>
                             </Button>
                         </div>
                     </div>
