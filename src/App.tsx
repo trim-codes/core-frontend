@@ -7,23 +7,23 @@ import DashboardScreen from "./page/dashboard";
 // import { Footer } from "./components/footer";
 
 import { SheetProvider } from "./providers/sheet-provider";
-
-// Import the SheetProvider
-
+import { SidebarProvider } from "./components/ui/sidebar";
 
 const App = () => {
   return (
     <Router>
-      <SheetProvider>
-        {/* <Navbar /> */}
-        <Routes>
-          <Route path="/" element={<HomeScreen />} />
-          <Route path="/sign-in" element={<SignInScreen />} />
-          <Route path="/sign-up" element={<SignUpScreen />} />
-          <Route path="/dashboard" element={<DashboardScreen />} />
-        </Routes>
-        {/* <Footer /> */}
-      </SheetProvider>
+      <SidebarProvider>
+        <SheetProvider>
+          {/* <Navbar /> */}
+          <Routes>
+            <Route path="/" element={<HomeScreen />} />
+            <Route path="/sign-in" element={<SignInScreen />} />
+            <Route path="/sign-up" element={<SignUpScreen />} />
+            <Route path="/dashboard" element={<DashboardScreen />} />
+          </Routes>
+          {/* <Footer /> */}
+        </SheetProvider>
+      </SidebarProvider>
     </Router>
   );
 }
